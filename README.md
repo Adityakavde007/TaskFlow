@@ -81,6 +81,11 @@ environment variables in the Vercel project:
 - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
 - `NEXT_PUBLIC_API_URL` (the Render API URL, without a trailing slash)
 
+Add them to the Production environment (and Preview/Development if needed).
+The `NEXT_PUBLIC_` Supabase values are public browser configuration; do not
+put Gmail OAuth credentials or a Supabase service-role key in the frontend.
+After changing environment variables, redeploy the frontend.
+
 Set `FRONTEND_ORIGINS` on Render to the deployed Vercel origin. Then add the
 Vercel site URL and `/dashboard` redirect URL in Supabase Authentication URL
 Configuration, and add the Vercel site URL to the Google OAuth authorized
